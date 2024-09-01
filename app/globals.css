@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.burger {
+    width: 100%;
+}
+
+.burger::after {
+    content: "";
+    display: block;
+    width: 40%;
+    background-color: white;
+    height: 1px;
+    margin: auto;
+    position: relative;
+    transition: transform 0.3s;
+    top: -5px;
+}
+
+.burger::before {
+    content: "";
+    display: block;
+    width: 40%;
+    background-color: white;
+    height: 1px;
+    margin: auto;
+    position: relative;
+    transition: transform 0.3s;
+    top: 5px;
+}
+
+.burgerActive::after {
+    transform: rotate(45deg);
+    top: -1px;
+}
+
+.burgerActive::before {
+    top: 1px;
+    transform: rotate(-45deg);
+}
+
+.grad {
+    background-image: radial-gradient(#FEC51C, #F89808);
+}
