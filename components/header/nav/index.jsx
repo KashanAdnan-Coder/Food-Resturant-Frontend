@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 const index = () => {
     const user = useSelector(state => state.user)
+   
     const navItems = [
         {
             title: "Home",

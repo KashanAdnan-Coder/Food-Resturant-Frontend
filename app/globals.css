@@ -43,3 +43,21 @@
 .grad {
     background-image: radial-gradient(#FEC51C, #F89808);
 }
+
+
+.cart::after {
+    content: attr(data-count);
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    background-color: #455CE9;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
