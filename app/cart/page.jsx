@@ -1,10 +1,11 @@
 'use client'
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { removeSingleCart } from "@/redux/slice/cartSlice"
 
 const page = () => {
   const cart = useSelector(state => state.cart)
-
+  const dispatch = useDispatch()
   return (
     <div>
       {
@@ -15,6 +16,9 @@ const page = () => {
               <div>
                 <p> {item.title ? 'This is never prerendered' : item.title}</p>
               </div>
+              <button className='ml-6' onClick={() => {
+                dispatch(removeSingleCart(item._id))
+              }}>Remove</button>
             </div>
           )
         })

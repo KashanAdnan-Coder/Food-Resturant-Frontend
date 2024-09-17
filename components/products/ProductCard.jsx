@@ -12,7 +12,6 @@ const ProductCard = ({ data }) => {
             <h1>{data.title}</h1>
             <p>{data.desc}</p>
             <button onClick={addCartCount}>Add to Cart</button>
-            <button onClick={() => dispatch(removeCart(data))}>remove Everythng</button>
         </div>
     )
 }
